@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM  from 'react-dom/client';
-
-const App = () => {
-  return (
-    <h1>Hello world</h1>
-  )
-}
+import HelloWorldApp from './HelloWorldApp';
+import "./styles.css";
 
 const element = document.getElementById('root');
 
 if (element) {
     ReactDOM.createRoot(element).render(
         <React.StrictMode>
-            <App />
+            <HelloWorldApp />
         </React.StrictMode>
     )
 }
-
-export default App
