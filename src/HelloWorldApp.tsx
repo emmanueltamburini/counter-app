@@ -5,12 +5,18 @@ const newMessage = {
 
 const helloWorld = () => "Hello world";
 
-const HelloWorldApp = () => {
+interface Props {
+    title: string;
+    subTitle: number;
+}
+
+const HelloWorldApp = ({title, subTitle}: Props) => {
   return (
     <>
-        <h1>{helloWorld()}</h1>
+        <h1>{title}</h1>
+        <h2>{subTitle + 1}</h2>
         <code>{JSON.stringify(newMessage)}</code>
-        <p>I am a subtitle</p>
+        <p>{helloWorld()}</p>
     </>
   )
 }
