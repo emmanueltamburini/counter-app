@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM  from 'react-dom/client';
-import HelloWorldApp from './HelloWorldApp';
+import { CounterApp } from './CounterApp';
 import "./styles.css";
 
 const element = document.getElementById('root');
@@ -8,7 +8,7 @@ const element = document.getElementById('root');
 if (element) {
     ReactDOM.createRoot(element).render(
         <React.StrictMode>
-            <HelloWorldApp title='Title' subTitle={2}/>
+            <CounterApp value={5}/>
         </React.StrictMode>
     )
 }
