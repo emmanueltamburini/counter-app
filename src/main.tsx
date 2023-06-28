@@ -8,7 +8,7 @@ const element = document.getElementById('root');
 if (element) {
     ReactDOM.createRoot(element).render(
         <React.StrictMode>
-            <CounterApp value={5}/>
+            <CounterApp value={20}/>
         </React.StrictMode>
     )
 }
