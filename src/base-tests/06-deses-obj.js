@@ -2,7 +2,7 @@
 const person = {
     name: 'Tony',
     age: 45,
-    password: 'Ironman'
+    password: 'IronMan'
 };
 
 const usContext = ({ password, name, age, range = 'Capitán' }) => {
