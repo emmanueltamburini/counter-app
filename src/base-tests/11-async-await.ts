@@ -1,5 +1,4 @@
 
-
 const getImage = async() => {
 
     try {
@@ -23,6 +22,3 @@ const getImage = async() => {
 }
 
 getImage();
-
-
-

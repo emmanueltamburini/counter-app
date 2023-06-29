@@ -1,15 +1,12 @@
-
-
-
-const username   = 'Fernando';
-const lastName = 'Herrera';
+const username   = 'Emmanuel';
+const lastName = 'Tamburini';
 
 const fullName = `${ username } ${ lastName }`;
 
 console.log( fullName );
 
-function getGreetings(name) {
-    return 'Hi ' + name;
+export const getGreetings = (name: string) =>  {
+    return 'Hello ' + name;
 }
 
 console.log( `This is your text: ${ getGreetings( username ) }  ` );

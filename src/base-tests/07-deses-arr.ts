@@ -12,7 +12,7 @@ const returnArray = () =>{
 const [ letters, numbers ] = returnArray(); 
 console.log(letters, numbers);
 
-const usState = ( value ) => {
+const usState = ( value: string ): [string, () => void] => {
     return [ value, ()=>{ console.log('Hello world') } ];
 }
 

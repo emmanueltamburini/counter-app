@@ -1,11 +1,26 @@
+interface Input {
+    password: string;
+    age: number;
+    name?: string
+}
 
-const person = {
+interface Result {
+    namePassword: string,
+    age: number,
+    latLng: {
+        lat: number,
+        lng: number
+    },
+    year?: number
+}
+
+const person: Input = {
     name: 'Tony',
     age: 45,
     password: 'IronMan'
 };
 
-const usContext = ({ password, name, age, range = 'Capitán' }) => {
+const usContext = ({ password, age, }: Input): Result => {
     
     return {
         namePassword: password,
