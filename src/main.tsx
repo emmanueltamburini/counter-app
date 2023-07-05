@@ -10,6 +10,7 @@ if (element) {
     ReactDOM.createRoot(element).render(
         <React.StrictMode>
             <HelloWorldApp title='Title' subTitle={1} name='Emmanuel'/>
+            <CounterApp value={100}/>
         </React.StrictMode>
     )
 }
