@@ -25,13 +25,13 @@ export const CounterApp = ({value}: Props) => {
     <>
         <h1>CounterApp</h1>
         <h2> { counter } </h2>
-        <button onClick={handleSubtract}>
+        <button aria-label="btn-subtract" onClick={handleSubtract}>
             -1
         </button>
-        <button onClick={handleAdd}>
+        <button aria-label="btn-add" onClick={handleAdd}>
             +1
         </button>
-        <button onClick={handleReset}>
+        <button aria-label="btn-reset" onClick={handleReset}>
             reset
         </button>
     </>
