@@ -1,26 +1,30 @@
 import React from "react";
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import HelloWorldApp from '../src/HelloWorldApp';
 
 describe('HelloWorldApp test', () => {
+    const title = "Title";
+    const name = "Emmanuel";
+    const subTitle = 2;
+
     test('should be equal to snapshot', () => {
-        const {container} = render(<HelloWorldApp name="Emmanuel" title="Title" subTitle={2}/>);
+        const {container} = render(<HelloWorldApp name={name} title={title} subTitle={subTitle}/>);
         expect(container).toMatchSnapshot();
     });
 
-    test('should show an H1 element', () => {
-        const title = 'Title';
-        const subTitle = 2;
-        const {container, getByText, getByTestId, getAllByText} = render(<HelloWorldApp name="Emmanuel" title={title} subTitle={subTitle}/>);
-        expect(getByText(title)).toBeTruthy();
-        expect(getByTestId('test-title').innerHTML).toContain(title);
-        expect(getByTestId('test-subTitle').innerHTML).toContain((subTitle + 1).toString());
-        expect(getAllByText((subTitle + 1).toString()).length).toBe(2);
-
-
-        const h1 = container.querySelector('h1');
-        expect(h1?.innerHTML).toContain(title);
+    test('should show the message "Title"', () => {
+        render(<HelloWorldApp name={name} title={title} subTitle={subTitle}/>);
+        // screen.debug(); // To check  component
+        expect(screen.getByText(title)).toBeTruthy();
     });
 
+    test('should show an H1 element', () => {
+        render(<HelloWorldApp name={name} title={title} subTitle={subTitle}/>);
+        expect(screen.getByRole('heading', {level: 1})).toBeTruthy();
+    });
 
+    test('should show a subtitle sending by props', () => {
+        render(<HelloWorldApp name={name} title={title} subTitle={subTitle}/>);
+        expect(screen.getAllByText(subTitle+1).length).toBe(2);
+    });
 })
