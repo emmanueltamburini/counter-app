@@ -2,12 +2,21 @@
 
 exports[`HelloWorldApp test should be equal to snapshot 1`] = `
 <div>
-  <h1>
+  <h1
+    data-testid="test-title"
+  >
      
     Title
      
   </h1>
-  <h2>
+  <h2
+    data-testid="test-subTitle"
+  >
+    3
+  </h2>
+  <h2
+    data-testid="test-subTitle2"
+  >
     3
   </h2>
   <code>
