@@ -2,7 +2,7 @@
 
 ## CounterApp README
 
-This application has designed to simulate a Pokedex, in this app you will be able to watch every pokemon and their descriptions in a very friendly interface.
+This application has designed to simulate counter app and something like a hello world app to practice react concepts
 
 ### Getting started
 
